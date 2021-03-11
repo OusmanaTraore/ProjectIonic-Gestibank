@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'list-agent',
     loadChildren: () => import('./list-agent/list-agent.module').then( m => m.ListAgentPageModule)
   },
+  {
+    path: 'client',
+    loadChildren: () => import('./client/client.module').then( m => m.ClientPageModule)
+  },
 ];
 
 @NgModule({
