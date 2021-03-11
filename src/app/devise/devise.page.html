@@ -1,9 +1,53 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>devise</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/home">
+        <ion-icon slot="icon-only" name="arrow-back" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="primary" routerLink="/home">
+      <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content
+
+>
+
+  <ion-list style="margin-bottom: 25px;">
+    <ion-list-header style="margin-top: 25px; margin-bottom: 25px;">
+      <ion-label style="text-align: center;">
+       <h1> Choix  de votre devise</h1>
+      </ion-label>
+    </ion-list-header>
+  
+    <ion-item>
+      <ion-label  style="width: 90px;
+      font-size: 25px;">Devise</ion-label>
+ 
+      <ion-select  [(ngModel)]="devise" (ionChange)="codeSelected()" placeholder="Select">
+        <ion-select-option value="EUR">EURO</ion-select-option>
+        <ion-select-option value="TND">DINARD</ion-select-option>
+        <ion-select-option value="GBP">LIVRE</ion-select-option>
+        <ion-select-option value="MRO">OUGUIYAS</ion-select-option>
+      </ion-select>
+    </ion-item>
+ 
+  </ion-list>
+  
+
+  <ion-item class="montant">
+    <ion-label>MONTANT</ion-label>
+    <ion-input [(ngModel)]="montant"></ion-input>
+  </ion-item>
+  <ion-item class="resultat">
+    <ion-label>RESULTAT</ion-label>
+    <ion-input  [(ngModel)]="resultat"></ion-input>
+  </ion-item>
+  <ion-button expand="block" shape="round"    (click)="convert()">Convertir</ion-button>
+
 
 </ion-content>
