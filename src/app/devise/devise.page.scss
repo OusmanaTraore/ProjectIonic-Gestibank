@@ -2,7 +2,17 @@
 ion-content{
     background: rgb(89, 228, 238);
 }
-
+.image{
+    text-align: center;
+    margin-top: 25px;
+}
+img{
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    border: 5px solid rgb(175, 205, 240);
+    text-align: center;
+    margin-bottom: 25px;}
 // #devise{
 //     --background:url(../../assets/images/logoblack.gif) no-repeat center 160px / 250px 250px fixed;
 //   }
@@ -20,6 +30,10 @@ ion-label{
     font-size: 25px;
 
 }
+ion-button{
+   
+    margin-top: 45px;
+}
 /*
 
 ion-card{
@@ -35,9 +49,7 @@ ion-card-title{
     color: navy;
 }
 
-ion-button{
-    --background:navy;
-}
+
 
 ion-toolbar{
     --background:white;
