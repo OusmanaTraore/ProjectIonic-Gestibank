@@ -20,10 +20,6 @@ const routes: Routes = [
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
   {
-    path: 'client',
-    loadChildren: () => import('./client/client.module').then( m => m.ClientPageModule)
-  },
-  {
     path: 'devise',
     loadChildren: () => import('./devise/devise.module').then( m => m.DevisePageModule)
   },
