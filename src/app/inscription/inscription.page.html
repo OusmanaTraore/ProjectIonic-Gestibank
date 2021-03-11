@@ -1,9 +1,57 @@
+
 <ion-header>
   <ion-toolbar>
-    <ion-title>inscription</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/home">
+      <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content>
+<div id=header>
+  <h1>Creation de Compte</h1>
+  <img src="assets/images/logo2.png" alt="logo">
+</div>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Nom</ion-label>
+    <ion-input  [(ngModel)]="nom" type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Prénom</ion-label>
+    <ion-input [(ngModel)]="prenom"  type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Téléphone</ion-label>
+    <ion-input [(ngModel)]="phone"  type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="mail"  type="text" required></ion-input>
+  </ion-item>
+
+  
+
+ 
+  
+  <ion-item>
+    <ion-label >Tyde de Compte</ion-label>
+  
+    <ion-select  [(ngModel)]="compte"  (ionChange)="compteSelected()" placeholder="Select">
+      <ion-select-option value="courant">Courant</ion-select-option>
+      <ion-select-option value="epargne">Épargne</ion-select-option>
+      <ion-select-option value="decouvert">Découvert</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-button expand="block" shape="round" (click)="inscription();" >Nous rejoindre</ion-button>
+
+
+<p>En cliquant  sur "Nous rejoindre" , <br> vous acceptez  nos termes & conditions</p>
 </ion-content>
+
