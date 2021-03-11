@@ -44,11 +44,10 @@ export class InscriptionPage implements OnInit {
       }
       this.service.postUser(this.user).subscribe(
         response => {
-          //console.log(response)
           if(this.nom != null && this.prenom!=null && this.phone!=null && this.mail!=null 
             && this.compteSelected()!=null){
           this.creationAlert();
-          window.location.reload();
+          
           this.router.navigate(["home"]);
         }else{
           this.messageToasted("Merci de renseigner tous les champs !");
@@ -67,11 +66,11 @@ export class InscriptionPage implements OnInit {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Bienvenue chez GestiBank',
-      message: 'Votre compte a été créé avec succès !' 
-      + '\n' 
-      + 'Vous pouvez déjà vous connecter sur votre espace client.'
-      + '\n'
-      + 'Connectez-vous sur votre adresse mail afin de récupérer vos identifiants.',
+      message: 'Votre compte a été créé avec succès !' ,
+      // + '\n' 
+      // + 'Vous pouvez déjà vous connecter sur votre espace client.'
+      // + '\n'
+      // + 'Connectez-vous sur votre adresse mail afin de récupérer vos identifiants.',
       buttons: ['OK']
     });
     await alert.present();
